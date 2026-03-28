@@ -1,0 +1,66 @@
+open web openrouter.ai -> generate api keys
+
+open terminal paste link ini "powershell -c "irm https://openclaw.ai/install.ps1 | iex".
+->yes
+->QuickStart
+->Openrouter
+->paste Api key
+->api key tadi yang di atas
+->kemudian bakaaln muncul eror, kita tinggal ketik "sudo chown -R $USER ~/.openclaw"
+	->kemudian masukin password sudo kita atau system linuxnya
+->jalanin ulang si url tadi "curl -ffSL https://openclaw.ai/install.sh | bash"
+
+->nah sekarang bakalan muncul permission gateway token langsung YES aja
+-> NO, untuk permission open claw 700
+->create session, YES
+->Install gateway service, YES
+->gateway service runtime, YES
+->kemudian bakalan muncul url jika tidak eror, kemudian tinggal copy dan buka di browser
+	->jika tidak muncul, balik ke terminal ctrl c, ketik "openclaw configure"
+->local
+->gateway
+->auto
+->token
+->off
+->yes
+->token baru muncul 
+->daemon
+->restart
+->heal check
+->continue
+
+->balik ke url web tadi , jika sudah muncul kita perlu masukin code/token. karena tokennya tadi ke refresh maka kita perlu ketik di cmd nya
+->cat ~/ .openclaw/openclaw.json
+->muncul token, copy pindahin ke web tdi (itu di bagian overview)
+
+->balik ke cmd ketik "openclaw configure"
+->pilih model (openRouter) lagi
+->paste API key nya
+->pilih model (step-3.5-flash free)
+->balik lagi ke atas pilih daemon, kalo sudah selesai reload lagi url tdi, new session
+->jika sudah berhasil ketik "interview me for the openclaw first setup"
+->tinggal lanjutin petunjuknya
+
+->jika sudah, buka telegram cari bothFather
+	->langsung pilih /newbot
+->kasih nama
+->username harus berakhiran _bot
+->jika dapat token, tinggal ketik openclaw configure lagi
+->channel
+->configure/link
+->telegram
+->masukin bot api nya
+->enter telegram bot
+->pilih done
+->police now, YES
+->mode pairing, YES
+->restart daemonnya
+
+-> balik lagi ke openclaw configure terus restrat untuk melihat telegramnya sudah oke apa tidak
+->balik ke telegram lagi click link yang di kasih yang paling atas, di atas api yang di kasih
+->langsung start
+	->jika not configured, tinggal copy yang paling bawah
+	->tempel ke cmd nya lagi
+	->jika sudah pairing, sudah bisa kita operasikan telegramnya
+->untuk prompt pertama kita coba verifikasi dulu file USER.md kita apakah sudah sesuai
+
